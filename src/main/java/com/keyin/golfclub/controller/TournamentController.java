@@ -29,4 +29,11 @@ public class TournamentController {
     public Optional<Tournament> getTournamentById(@PathVariable Long id) {
         return tournamentService.getTournamentById(id);
     }
+
+//    @PostMapping("/{tournamentId}/addMember/{memberId}")
+//    public Tournament addMemberToTournament(
+//            @PathVariable Long tournamentId,
+//            @PathVariable Long memberId) {
+//        return tournamentService.addMemberToTournament(tournamentId, memberId);
+//    }
 }

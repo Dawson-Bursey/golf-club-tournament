@@ -28,4 +28,8 @@ public class MemberController {
     public Optional<Member> getMemberById(@PathVariable Long id) {
         return memberService.getMemberById(id);
     }
-}
+
+    @GetMapping("/searchMembers")
+    public List<Member> searchMembersByFirstName(@RequestParam String firstName) {
+        return memberService.searchByFirstName(firstName);
+    }}

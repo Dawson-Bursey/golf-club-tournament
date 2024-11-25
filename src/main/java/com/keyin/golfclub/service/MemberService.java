@@ -25,4 +25,12 @@ public class MemberService {
     public Optional<Member> getMemberById(Long id) {
         return memberRepository.findById(id);
     }
-}
+
+    // New method to search members by firstName
+    public List<Member> searchByFirstName(String firstName) {
+        return memberRepository.searchByFirstName(firstName);
+    }
+    }
+
+
+

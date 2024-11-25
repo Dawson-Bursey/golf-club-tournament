@@ -1,5 +1,6 @@
 package com.keyin.golfclub.service;
 
+import com.keyin.golfclub.model.Member;
 import com.keyin.golfclub.model.Tournament;
 import com.keyin.golfclub.repository.TournamentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,4 +26,7 @@ public class TournamentService {
     public Optional<Tournament> getTournamentById(Long id) {
         return tournamentRepository.findById(id);
     }
+
+
+
 }
