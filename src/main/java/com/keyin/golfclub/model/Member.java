@@ -9,13 +9,17 @@ import jakarta.persistence.Id;
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-increment ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstName;
     private String lastName;
     private String email;
     private String phoneNumber;
+
+    // Default constructor (required by JPA)
+    public Member() {
+    }
 
     // Getters and Setters
     public Long getId() {

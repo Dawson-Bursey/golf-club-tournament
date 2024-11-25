@@ -1,11 +1,6 @@
 package com.keyin.golfclub.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -23,10 +18,18 @@ public class Tournament {
     private double cashPrizeAmount;
 
     @ManyToMany
+    @JoinTable(
+            name = "tournament_members",
+            joinColumns = @JoinColumn(name = "tournament_id"),
+            inverseJoinColumns = @JoinColumn(name = "member_id")
+    )
     private List<Member> participatingMembers;
 
-    // Getters and Setters
+    // Default constructor (required by JPA)
+    public Tournament() {
+    }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }

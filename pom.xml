@@ -15,113 +15,63 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.0.0</version>
-        <relativePath /> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
-
 
     <properties>
         <java.version>17</java.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-    </repositories>
-
-
     <dependencies>
-        <!-- Spring Boot Starter Web - For REST API -->
+        <!-- Spring Boot Starter Web - For REST APIs -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Spring Boot Starter Data JPA - For ORM (Hibernate) support -->
+        <!-- Spring Boot Starter Data JPA - For ORM support -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- MySQL Connector - JDBC Driver for MySQL -->
+        <!-- MySQL Connector - JDBC Driver -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
-            </dependency>
+        </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-jpa</artifactId>
-            </dependency>
-
-
-
-
-
-        <!-- Spring Boot DevTools (optional) - To help with development -->
+        <!-- Spring Boot DevTools (optional, for development only) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Spring Boot Starter Test - For testing purposes -->
+        <!-- Spring Boot Starter Test - For testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- Lombok (optional) - To simplify model/POJO classes (Getters, Setters, Constructors) -->
+        <!-- Lombok (optional, for boilerplate code reduction) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.26</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Docker Maven Plugin (optional, if you'd like to build docker image via Maven) -->
-        <dependency>
-            <groupId>com.spotify</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-
-
-
-
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin - To build the application JAR -->
+            <!-- Spring Boot Maven Plugin - To build and run the application -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-            <!-- Docker Plugin (optional) - Used to build Docker images from the Maven build -->
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>1.0.0</version>
-
-
-
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                            <goal>push</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
-
 </project>

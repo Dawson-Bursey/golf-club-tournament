@@ -1,4 +1,5 @@
 package com.keyin.golfclub.service;
+
 import com.keyin.golfclub.model.Member;
 import com.keyin.golfclub.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
